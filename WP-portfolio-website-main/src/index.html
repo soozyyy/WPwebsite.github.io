@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenSauce Portfolio Website</title>
+    <link rel="stylesheet" href="/src/index.css">
+    <link rel="stylesheet" href="/styles/mainPage.css">
+    <link rel="stylesheet" href="/styles/home.css">
+    <link rel="stylesheet" href="/styles/aboutUs.css">
+    <link rel="stylesheet" href="/styles/projects.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap" rel="stylesheet">
+</head>
+<body>
+        <div class="top">
+            <div class="top-left">
+                <img src="/src/images/logo.png" class="logo"/>
+                <p class="team-name">OpenSauce</p>
+            </div>
+
+            <div class="top-right">
+                <div class="widget widget-home">Home</div>
+                <div class="widget widget-about-us">About Us</div>
+                <div class="widget widget-projects">Projects</div>
+            </div>
+
+            <img class="hamburger-icon" src="/src/images/hamburger.png" alt="list"/>
+        </div>
+
+        <div class="popup-list"> </div>
+    
+        <div class="content js-content">
+
+            <div class="intro">
+                <img class="intro-logo" src="/src/images/logo-name.png"/>
+                <!-- <div class="intro-team">
+                   Fast,Free,Reliable!
+                </div> -->
+            </div>
+
+            <div class="js-home home-content">
+                <!-- home content will show here -->
+            </div>
+
+            <div class="js-about-us about-us-content">
+                <!-- home content will show here -->
+            </div>
+    
+            <div class="js-projects projects-content">
+                <!-- home content will show here -->
+            </div>
+
+            <div class="footer" style="background-color: rgb(5, 38, 136);">
+                <div class="footer-title" style="color: white; font-family: sans-serif; padding-top: 1vh; font-size: 1.5rem;">
+                    Contact Us
+                </div>
+                <div class="footer-content" >   
+                    <img  src="/src/images/linkedin.png" class="icon" onclick="window.open('https://www.linkedin.com', '_blank')"/>
+
+                    <img  src="/src/images/twitter.png" class="icon" onclick="window.open('https://www.x.com', '_blank')"/>
+                    
+                    <img src="/src/images/instagram.png" class="icon" onclick="window.open(`https://www.instagram.com`, '_blank')" />
+                </div>
+            </div>
+        </div>
+
+    </body>
+<script type="module" src="./scripts/home.js"></script>
+<script type="module" src="./scripts/about-us.js"></script>
+<script type="module" src="./scripts/projects.js"></script>
+<script>
+   const hamburgerIcon = document.querySelector('.hamburger-icon');
+   const popupList = document.querySelector('.popup-list');
+   let  hamburgerList=`
+    <div class="hamburger-list">
+        <div class="container">
+            <div class="list-item widget-home" onClick="toggleMenu()">Home</div>
+            <div class="list-item widget-about-us" onClick="toggleMenu()">About Us</div>
+            <div class="list-item widget-projects" onClick="toggleMenu()">Projects</div>
+        </div>
+    </div>
+    `
+   hamburgerIcon.addEventListener('click',()=>{
+
+        if(popupList.innerHTML===hamburgerList){
+            popupList.innerHTML = '';
+        }else{
+            popupList.innerHTML = hamburgerList;
+        }
+   })
+
+   function toggleMenu(){
+    const menu=document.querySelector('.hamburger-list');
+    if(menu.style.display==='block'){
+        menu.style.display='none';
+    }else{
+        menu.style.display='block';
+    }
+   }
+
+   //Scroll to top section
+   document.querySelector('.top-left').addEventListener('click',()=>{
+        const scrollPercentage=0;
+    const scrollHeight=document.body.scrollHeight;
+    window.scrollTo({
+        top:scrollPercentage*scrollHeight,
+        behavior:'smooth'
+    })
+        console.log("About us button clicked")
+    })   
+
+   //Scroll to home section
+    document.querySelector('.widget-home').addEventListener('click',()=>{
+    const scrollPercentage=0.148;
+    const scrollHeight=document.body.scrollHeight;
+    window.scrollTo({
+        top:scrollPercentage*scrollHeight,
+        behavior:'smooth'
+    })
+    console.log("button clicked")
+    })
+
+    //Scroll to about-us section
+    document.querySelector('.widget-about-us').addEventListener('click',()=>{
+        const scrollPercentage=0.39;
+    const scrollHeight=document.body.scrollHeight;
+    window.scrollTo({
+        top:scrollPercentage*scrollHeight,
+        behavior:'smooth'
+    })
+        console.log("About us button clicked")
+    })   
+
+    //scroll to projects section
+    document.querySelector('.widget-projects').addEventListener('click',()=>{
+        const scrollPercentage=0.66;
+    const scrollHeight=document.body.scrollHeight;
+    window.scrollTo({
+        top:scrollPercentage*scrollHeight,
+        behavior:'smooth'
+    })
+        console.log("About us button clicked")
+    })   
+
+</script>
+</html>
