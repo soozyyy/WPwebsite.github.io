@@ -32,7 +32,7 @@ export function aboutus(){
                 </div>
 
                 <div class="card-content">
-                    <h2>NAME</h2>
+                    <h2>JASON JOEL JOHNNY</h2>
                     <p>
                     I’m Jason, a dedicated and creative computer scientist with a passion for building engaging and impactful digital experiences. I enjoy turning ideas into polished, user-friendly solutions through thoughtful design and clean, efficient code. I’ve worked on a variety of projects that reflect both my technical abilities and my commitment to quality. 
                     </p>
