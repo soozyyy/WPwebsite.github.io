@@ -9,7 +9,7 @@ export function aboutus(){
             <div class="about-us-box card1">
                 <div class="profile-img-wrapper">
                     <div class="profile-img">
-                        <img src="./images/leehom.jpg">
+                        <img src="./images/leehom.jpg" alt="img1">
                     </div>
                 </div>
 
@@ -27,7 +27,7 @@ export function aboutus(){
             <div class="about-us-box reverse card2">
                 <div class="profile-img-wrapper">
                     <div class="profile-img">
-                        <img src="./images/jason.jpg">
+                        <img src="./images/jason.jpg" alt="img2">
                     </div>
                 </div>
 
@@ -45,7 +45,7 @@ export function aboutus(){
             <div class="about-us-box card3">
                 <div class="profile-img-wrapper">
                     <div class="profile-img">
-                        <img src="./images/zhenyang.jpg">
+                        <img src="./images/zhenyang.jpg" alt="img3">
                     </div>
                 </div>
 
