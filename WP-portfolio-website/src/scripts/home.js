@@ -3,7 +3,7 @@ export function homePage() {
         <div class="home-content">
             <div class="content-box">
                 <div class="box-image">
-                    <img src="./images/web-project.png">
+                    <img src="./images/web-project.png" alt="vision">
                 </div>
                 <div class="box-content">
                     <h2>Vision</h2>
@@ -14,7 +14,7 @@ export function homePage() {
             
             <div class="content-box">
                 <div class="box-image">
-                    <img src="./images/mission.jpg">
+                    <img src="./images/mission.jpg" alt="mission">
                 </div>
                 <div class="box-content">
                     <h2>Mission</h2>
