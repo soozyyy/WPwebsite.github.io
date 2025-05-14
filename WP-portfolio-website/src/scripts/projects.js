@@ -8,7 +8,7 @@ export function projects() {
           <div class="projects-list">
 
               <div class="project-item project-item-1">
-                <img class="project-img project-img-1" style="height:50%"  src="./images/project-1.png"/>
+                <img class="project-img project-img-1" style="height:50%"  src="./images/project-1.png" alt="UTM Bus tracking system"/>
 
                 <div class="project-item-content project-item-content-1">
                   <h2 class="project-title">
@@ -21,7 +21,7 @@ export function projects() {
               </div>
 
               <div class="project-item">
-                <img class="project-img project-img-2"  src="./images/project-2.png"/>
+                <img class="project-img project-img-2"  src="./images/project-2.png" alt="Spectrumlink"/>
 
                 <div class="project-item-content project-item-content-2">
                   <h2 class="project-title project-title-2">SpectrumLink</h2>
