@@ -1,0 +1,155 @@
+<!-- 
+Group Members:
+1. LING LEE HOM A23CS0105
+2. JASON JOEL JOHNY A23CS0091
+3. SOO ZHEN YANG A23CS0270
+-->
+
+<!DOCTYPE html> 
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenSauce Portfolio Website</title>
+    <link rel="stylesheet" href="/src/index.css">
+    <link rel="stylesheet" href="/styles/mainPage.css">
+    <link rel="stylesheet" href="/styles/home.css">
+    <link rel="stylesheet" href="/styles/aboutUs.css">
+    <link rel="stylesheet" href="/styles/projects.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap" rel="stylesheet">
+</head>
+<body> 
+        <div class="top">
+            <div class="top-left">
+                <img src="/src/images/logo.png" class="logo" alt="logo"/>
+                <p class="team-name">OpenSauce</p>
+            </div>
+
+            <div class="top-right">
+                <div class="widget widget-home">Home</div>
+                <div class="widget widget-about-us">About Us</div>
+                <div class="widget widget-projects">Projects</div>
+            </div>
+
+            <img class="hamburger-icon" src="/src/images/hamburger.png" alt="list"/>
+        </div>
+
+        <div class="hamburger-list hidden">
+            <div class="container">            
+                <div class="list-item widget-home">Home</div>
+                <div class="list-item widget-about-us">About Us</div>
+                <div class="list-item widget-projects">Projects</div>
+            </div>
+        </div>
+
+        <div class="content js-content">
+
+            <div class="intro">
+                <img class="intro-logo" src="/src/images/logo-name.png" alt="logo"/>
+                <!-- <div class="intro-team">
+                   Fast,Free,Reliable!
+                </div> -->
+            </div>
+
+            <div class="js-home home-content">
+                <!-- home content will show here -->
+            </div>
+
+            <div class="js-about-us about-us-content">
+                <!-- home content will show here -->
+            </div>
+    
+            <div class="js-projects projects-content">
+                <!-- home content will show here -->
+            </div>
+
+            <div class="footer" style="background-color: rgb(5, 38, 136);">
+                <div class="footer-title" style="color: white; font-family: sans-serif; padding-top: 1vh; font-size: 1.5rem;">
+                    Contact Us
+                </div>
+                <div class="footer-content" >   
+                    <img  src="/src/images/linkedin.png" class="icon" onclick="window.open('https://www.linkedin.com', '_blank')" alt="LinkedIn"/>
+
+                    <img  src="/src/images/twitter.png" class="icon" onclick="window.open('https://www.x.com', '_blank')" alt="Twitter"/>
+                    
+                    <img src="/src/images/instagram.png" class="icon" onclick="window.open(`https://www.instagram.com`, '_blank')" alt="Instagram" />
+                </div>
+            </div>
+        </div>
+
+    </body>
+<script type="module" src="./scripts/home.js"></script>
+<script type="module" src="./scripts/about-us.js"></script>
+<script type="module" src="./scripts/projects.js"></script>
+<script>
+const hamburgerIcon = document.querySelector('.hamburger-icon');
+const hamburgerList = document.querySelector('.hamburger-list');
+   
+    hamburgerIcon.addEventListener('click', () => {
+        hamburgerList.classList.toggle('hidden');
+    });
+
+    function scrollToSection(scrollPercentage) {
+    const scrollHeight = document.body.scrollHeight;
+    window.scrollTo({
+        top: scrollPercentage * scrollHeight,
+        behavior: 'smooth'
+    });
+    hamburgerList.classList.add('hidden'); // Close menu after click 
+}
+
+    // Click events
+    document.querySelector('.top-left').addEventListener('click', () => scrollToSection(0));
+    document.querySelectorAll('.widget-home').forEach(el => el.addEventListener('click', () => scrollToSection(0.148)));
+    document.querySelectorAll('.widget-about-us').forEach(el => el.addEventListener('click', () => scrollToSection(0.39)));
+    document.querySelectorAll('.widget-projects').forEach(el => el.addEventListener('click', () => scrollToSection(0.66)));
+
+   //Scroll to top section
+   document.querySelector('.top-left').addEventListener('click',()=>{
+        const scrollPercentage=0;
+    const scrollHeight=document.body.scrollHeight;
+    window.scrollTo({
+        top:scrollPercentage*scrollHeight,
+        behavior:'smooth'
+    })
+    })   
+
+   //Scroll to home section
+    document.querySelector('.widget-home').addEventListener('click',()=>{
+    let scrollPercentage=0.178;
+
+
+
+    const scrollHeight=document.body.scrollHeight;
+    window.scrollTo({
+        top:scrollPercentage*scrollHeight,
+        behavior:'smooth'
+    })
+    
+    })
+
+    //Scroll to about-us section
+    document.querySelector('.widget-about-us').addEventListener('click',()=>{
+        const scrollPercentage=0.39;
+    const scrollHeight=document.body.scrollHeight;
+    window.scrollTo({
+        top:scrollPercentage*scrollHeight,
+        behavior:'smooth'
+    })
+    })   
+
+    //scroll to projects section
+    document.querySelector('.widget-projects').addEventListener('click',()=>{
+        const scrollPercentage=0.74;
+    const scrollHeight=document.body.scrollHeight;
+    window.scrollTo({
+        top:scrollPercentage*scrollHeight,
+        behavior:'smooth'
+    })
+    })   
+
+</script>
+</html>

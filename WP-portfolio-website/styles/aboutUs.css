@@ -1,0 +1,167 @@
+.about-us{
+    width: 100%;
+    min-height:67.5rem;
+    background: linear-gradient(to left right, 
+        #0f4c81 20%, 
+        #1a6fc9 60%, 
+        #0d47a1 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5.4rem;
+}
+
+.about-us-header{
+    background-color: rgb(55, 48, 150);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+    color: white;
+    font-family: "ADLaM Display", system-ui;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    border: solid;
+    margin-top: 8vh;
+    margin-bottom: 2vh;
+    white-space: nowrap;
+    max-width: 90%;
+    text-align: center;
+}
+
+.about-us-box {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 10px 10px 0px rgba(255, 255, 255, 0.25);
+    width: 1100px;
+    height: 400px;
+    margin: 3rem 0;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+}
+
+.about-us-box:hover{
+    transform: translateY(-5px);
+}
+
+.about-us-box.reverse{
+    flex-direction: row-reverse;
+    text-align: left;
+}
+
+.about-us-box.reverse .card-content {
+    padding-left: 0;
+    padding-right: 2rem;
+}
+
+.card1{
+    background-color: #d66262;
+}
+
+.card2{
+    background-color: #458FA0;
+}
+
+.card3{
+    background-color: #42AE76;
+}
+
+.profile-img-wrapper {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-img{
+    width: 400px;
+    height: 400px;
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.profile-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+}
+  
+.card-content {
+    width: 60%;
+    color: white;
+    font-family: system-ui, sans-serif;
+    padding-left: 2rem;
+}
+  
+.card-content h2 {
+    font-size: 1.8rem;
+    margin: 0 0 0.5rem;
+}
+  
+.card-content p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+  
+.icons {
+    margin-top: 1rem;
+}
+  
+.icons img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+
+
+@media (max-width: 768px) {
+    .about-us-box {
+      flex-direction: column;
+      height: auto;
+      width: 90%; /* makes it more natural on small screens */
+    }
+
+    .about-us-box.reverse {
+        flex-direction: column; /* Ensure reverse cards also stack like the others */
+    }
+  
+    .profile-img-wrapper {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+  
+    .profile-img {
+      width: 180px;
+      height: 180px;
+      margin: 0 auto;
+    }
+  
+    .profile-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  
+    .card-content {
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+      text-align: center;
+    }
+  
+    .card-content h2 {
+      font-size: 1.5rem;
+    }
+  
+    .card-content p {
+      font-size: 0.9rem;
+    }
+  }
+  
